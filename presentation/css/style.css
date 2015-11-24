@@ -6,10 +6,16 @@ html, body {
 }
 
 body{
-	background-color: #0095da;
+	background-color: #2196F3;
 	color: #fff;
 	overflow: hidden;
 	font-family: 'Roboto', Tahoma;
+}
+
+h1{
+	font-size: 20px;
+	margin: 10px 5px;
+	padding: 0;
 }
 
 section {
@@ -28,4 +34,23 @@ div.slide {
 
 .text-left {
 	text-align: left;
+}
+
+.img-resp{
+	max-width: 100%;
+	margin: auto;
+	height: auto;
+	display: block;
+}
+
+.height-140{
+	height: 140px;
+}
+
+.height-250{
+	height: 250px;
+}
+
+.clr{
+	clear: both;
 }
