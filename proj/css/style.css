@@ -1,0 +1,115 @@
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize*/ img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0}
+body, html {height: 100%; width: 100%;}
+body {font-family: Verdana, Tahoma, Arial; font-size: 14px; color: #000; height: 100vh;}
+h1,h2,h3 {color:#2196F3; margin: 5px 0 10px;}
+h1 {font-size: 20px;}
+h2 {font-size: 20px;}
+h3  {font-size: 18px;}
+a {color:#2196F3; text-decoration: none;}
+a:hover{}
+input,select,textarea{padding: 5px; border: 1px solid #ccc; display: block; border-radius: 0; border-color: #2196F3; width: 100%;}
+
+.fsize12 {font-size: 12px;}
+.fsize11 {font-size: 11px;}
+.fsize10 {font-size: 10px;}
+.dnone {display: none;}
+.dib {display: inline-block;}
+.fl{float: left;}
+.fr {float: right;}
+.clr {clear: both;}
+.p10 {padding: 10px;}
+.pt10 {padding-top: 10px;}
+.pb10 {padding-bottom: 10px;}
+.m0 {margin: 0;}
+.ml5 {margin-left: 5px;}
+.ml10 {margin-left: 10px;}
+.mt10 {margin-top: 10px;}
+.mb5 {margin-bottom: 5px;}
+.mb10 {margin-bottom: 10px;}
+.mb20 {margin-bottom: 20px;}
+.mr5 {margin-right: 5px;}
+.mr10{ margin-right:10px;}
+.h45p {height: 45px;}
+.w50p {width: 50%;}
+.w100p {width: 100%;}
+.w100px {width: 100px;}
+.hidden {visibility: hidden;}
+.btn {background-color: #0D47A1; color: #fff; border-radius: 0px 0px 0px 0px; -moz-border-radius: 0px 0px 0px 0px; -webkit-border-radius: 0px 0px 0px 0px;}
+.ng-invalid.ng-dirty  {border-color: red;}   
+.ng-valid.ng-dirty {border-color: green;}
+.blue{color: #2196F3;}
+[class*='bg-']:hover, .btn.active{opacity: 0.6; background-color: #ccc;}
+.btn.active {color: #444;}
+.color-red {color: #B71C1C;}
+.bg-red, .cat_1 {background-color: #B71C1C ;}
+.bg-green, .cat_2 {background-color: #4CAF50;}
+.bg-blue, .cat_3 {background-color: #0091EA;}
+.bg-yellow, .cat_4 {background-color: #FF9800;}
+.bg-dblue, .cat_5{background-color: #01579b;}
+.bg-grey, .cat_6 {background-color: #757575;}
+.bg-brown, .cat_7 {background-color: #795548;}
+
+.cat_1_border {border-top: 3px solid #B71C1C ; background-color: #f8e8e8;}
+.cat_2_border {border-top: 3px solid #4CAF50; background-color: #edf7ed;}
+.cat_3_border {border-top: 3px solid #0091EA; background-color: #e5f4fd;}
+.cat_4_border {border-top: 3px solid #FF9800; background-color: #fff4e5;}
+.cat_5_border{border-top: 3px solid #01579b; background-color: #e5eef5;}
+.cat_6_border {border-top: 3px solid #757575; background-color: #f1f1f1;}
+.cat_7_border {border-top: 3px solid #795548; background-color: #f1eeec;}
+.link_cat_all {position: relative;}
+
+*, *::before, *::after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+header {background-color: #2196F3; width: 100%; position: fixed; width: 100%; z-index: 7; top: 0;}
+.contact {background-color: #2196F3; padding: 5px 0; color: #fff;}
+nav > span:first-child {padding: 0;}
+nav > span{ width: 25%; display: inline-block; text-align: center;  float:left;}
+nav > span.active{background-color: #1565C0; color: #fff;}
+/*nav span img {margin: auto;}*/
+nav a {color:#fff; text-align: center; text-transform: uppercase; font-size: 19px; display: block; text-decoration: none; padding: 6px 0 12px;}
+nav a:hover, nav a.active{color: #fff; background-color: #23527c; text-decoration: none;}
+
+#events-gmap, section{ width: 100%; height: 100%;}
+.event-list-item .event-img img{width: 100%;}
+.event-caption {position: absolute; bottom: 0; left: 0; right: 0; background: rgba(250,250,260,0.8); padding: 5px 20px;}
+.select_date input {width: 100px; display:inline-block; margin:0 5px;}
+.list_dates {max-height: 30px; overflow: hidden;}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+	button.btn.active span { display: inline !important;}
+	/*.container {max-width: 300px;}
+	[class*='col-'] {width: 100%;}*/
+	nav > span span {display: none;}
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+	button.btn.active span { display: inline !important;}
+	/*.container {max-width: 460px;}
+	[class*='col-'] {width: 100%;}*/
+	nav > span span {display: none;}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	/*.container {max-width: 748px;}*/
+	nav > span span {display: inlin-block;}
+	nav > span, nav span.logo {width:25%;}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	/*.container {max-width: 972px;}*/
+	nav > span span {display: inline-block;}
+	nav > span, nav span.logo {width:25%;}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	/*.container {max-width: 1180px;}*/
+	nav > span span {display: inline-block;}
+	nav > span, nav span.logo {width:25%;}
+	}

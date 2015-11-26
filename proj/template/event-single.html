@@ -1,0 +1,56 @@
+﻿<div class="container" ng-controller="SingleEventCtrl">
+	<div class="h45p"></div>
+	<div class="event-single-item mt10" >
+
+		<div class="col-md-8 col-lg-8">
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<img  ng-src="{{event_single.image}}" class="img-responsive " alt="{{event_single.title}}" />
+			</div>
+
+			<div class="col-sm-8 col-md-8 col-lg-8 cat_{{event_single.category}}_border">
+				<h1>{{event_single.title}}</h1>
+			
+				<span class="dnone btn cat_{{event_single.category}}">{{event_single.category}}</span>
+				<div ng-repeat="date in dates"></div>
+				<div class="mb10">
+					<div class="dib">
+						<span ng-repeat="date in event_single.dates" ng-hide="(currDate | date: 'yyyy-MM-dd') > date.date">
+							<b ><i class="fa fa-calendar blue mr10"></i>{{date.date | date: 'EEEE, d MMMM yyyy'}}<span ng-show="date.timefrom.length && date.timetill.length">, <i class="fa fa-clock-o blue ml10 mr5"></i>{{date.timefrom}} - {{date.timetill}}</span></b><br/>
+						</span>
+						<span ng-show="(currDate | date: 'yyyy-MM-dd') > event_single.dates[event_single.dates.length-1].date" class="text-danger">
+							ця подія вже відбулася
+						</span>
+					</div>
+				</div>
+			
+				<div class="mb10" ng-show="event_single.tickets.length">
+					<i class="fa fa-ticket blue"></i> {{event_single.tickets}} 
+					<span ng-show="event_single.tickets_link.length"><a href="{{event_single.tickets_link}}" target="_blank" class="btn bg-yellow bm10">Купити квиток</a></span>
+				</div>
+			</div>
+			<div class="clr"></div>
+			<div class="mt10 mb10" ng-bind-html="event_single.description">{{event_single.description}}</div>
+		</div>
+
+		<div class="col-md-4 col-lg-4 mt10">
+		
+			<div class="mb10">
+				<i class="fa fa-map-marker blue"></i>
+				<b>{{event_single.location}}</b>
+				<div class="mb10"></div>
+				Адреса: {{event_single.location_addr}}
+			</div>
+		
+			
+			<div  id="eventmap" style="width: 100%; height: 400px;" class="mb10"></div>	
+
+			<div class="mb10" ng-show="event_single.web.length>0"><i class="fa fa-link blue"></i> {{event_single.web}}</div>
+			<div class="mb10" ng-show="event_single.email.length>0"><i class="fa fa-envelope-o blue"></i> {{event_single.email}}</div>
+			<div class="mb10" ng-show="event_single.phone.length>0"><i class="fa fa-phone blue"></i> {{event_single.phone}}</div>
+		</div>
+	</div>
+	<div class="clr"></div>
+</div>
+<div class="contact mt5 ">
+	<div class="container"><i class="fa fa-envelope-o"></i> eventsmapme@gmail.com</div>
+</div>
