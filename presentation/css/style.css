@@ -36,11 +36,23 @@ div.slide {
 	text-align: left;
 }
 
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
 .img-resp{
 	max-width: 100%;
 	margin: auto;
 	height: auto;
 	display: block;
+}
+
+.width-50p{
+	width: 50%;
 }
 
 .height-140{
