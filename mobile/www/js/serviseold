@@ -1,0 +1,55 @@
+angular.module('starter.services', [])
+
+.factory('Chats', function($http) {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  
+  /*var chats = (function () {
+      var json = null;
+      $.ajax({
+          'async': false,
+          'global': false,
+          'cache':false,
+          'url': 'http://nm.lviv.ua/pro/adm/mobeventslist.php',
+          'dataType': "json",
+          'success': function (data) {
+              json = data;
+          }
+      });
+      return json;
+  })();
+  *//*
+  var chats = [{
+    id: 101,
+    title: "\u0410\u043d\u0434\u0440\u0456\u0439 \u041c\u0430\u043a\u0430\u0440\u0435\u0432\u0438\u0447 \u0437 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043e\u044e Yiddish Jazz",
+    lastText: 'You on your way?',
+    face: 'img/ben.png'
+  }, {
+    id: 1,
+    title: 'Max Lynx',
+    lastText: 'Hey, it\'s me',
+    face: 'img/max.png'
+  }];
+  */
+  var chats = $http.get('http://nm.lviv.ua/pro/adm/mobeventslist.php').success(function(data){ 
+        return data;
+        console.log(data);
+      });
+  
+
+  return {
+    all: function() {
+      return chats;
+      console.log(chats);
+    },
+    get: function(chatId) {
+      for (var i = 0; i < chats.length; i++) {
+        if (chats[i].id === parseInt(chatId)) {
+          return chats[i];
+        }
+      }
+      return null;
+    }
+  };
+});

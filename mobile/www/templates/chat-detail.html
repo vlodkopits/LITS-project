@@ -1,0 +1,35 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{chat.title}}">
+  <ion-content class="padding">
+    <h2>{{chat.title}}</h2>
+    <img ng-src="{{chat.image}}">
+    <div class="dib">
+      <span ng-repeat="date in chat.dates" ng-hide="(currDate | date: 'yyyy-MM-dd') > date.date">
+        <b ><i class="fa fa-calendar blue mr10"></i>{{date.date | date: 'EEEE, d MMMM yyyy'}}<span ng-show="date.timefrom.length && date.timetill.length">, <i class="fa fa-clock-o blue ml10 mr5"></i>{{date.timefrom}} - {{date.timetill}}</span></b><br/>
+      </span>
+      <span ng-show="(currDate | date: 'yyyy-MM-dd') > chat.dates[chat.dates.length-1].date" class="text-danger">
+        ця подія вже відбулася
+      </span>
+    </div>
+
+    <div class="mb10" ng-show="chat.tickets.length">
+      <i class="fa fa-ticket blue"></i> {{chat.tickets}} 
+      <span ng-show="chat.tickets_link.length"><a href="{{chat.tickets_link}}" target="_blank" class="btn bg-yellow bm10">Купити квиток</a></span>
+    </div>
+
+    <div class="mb10">
+      <i class="fa fa-map-marker blue"></i>
+      <b>{{chat.location}}</b>
+      <div class="mb10"></div>
+      Адреса: {{chat.location_addr}}
+    </div>
+
+    <div class="mt10 mb10" ng-bind-html="chat.description">{{chat.description}}</div>
+    
+  </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="Список подій">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="{{chat.image}}">
+        <h2>{{chat.title}}</h2>
+        
+        <div class="mt10 list_dates">
+          <i class="fa fa-calendar blue fl"></i> 
+          <div class="fl fsize11 ml5">
+            <span ng-repeat="date in chat.dates" ng-hide="(currDate | date: 'yyyy-MM-dd') > date.date" >
+              <strong >{{date.date | date: 'd MMMM yyyy'}}<span ng-show="date.timefrom.length && date.timetill.length"><i class="fa fa-clock-o blue ml5 mr5"></i>{{date.timefrom}}-{{date.timetill}}</span></strong><br/>
+            </span>
+          </div>
+          <div class="clr"></div>
+        </div>
+        
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

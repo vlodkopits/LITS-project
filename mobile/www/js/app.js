@@ -40,46 +40,49 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.map', {
-    url: '/map',
+  .state('tab.dash', {
+    url: '/dash',
     views: {
-      'tab-map': {
-        templateUrl: 'templates/tab-map.html',
-        controller: 'MapCtrl'
+      'tab-dash': {
+        templateUrl: 'templates/tab-dash.html',
+        controller: 'DashCtrl'
       }
     }
   })
 
-  .state('tab.list', {
-      url: '/list',
+  .state('tab.chats', {
+      url: '/chats',
       views: {
-        'tab-list': {
-          templateUrl: 'templates/tab-list.html',
-          controller: 'ListCtrl'
+        'tab-chats': {
+          templateUrl: 'templates/tab-chats.html',
+          controller: 'ChatsCtrl'
         }
       }
     })
-    .state('tab.single', {
-      url: '/single/:eventId',
+    .state('tab.chat-detail', {
+      url: '/chats/:chatId',
       views: {
-        'tab-single': {
-          templateUrl: 'templates/single.html',
+        'tab-chats': {
+          templateUrl: 'templates/chat-detail.html',
           controller: 'ChatDetailCtrl'
         }
       }
     })
 
-  .state('tab.add', {
-    url: '/add',
+  .state('tab.account', {
+    url: '/account',
     views: {
-      'tab-add': {
-        templateUrl: 'templates/tab-add.html',
+      'tab-account': {
+        templateUrl: 'templates/tab-account.html',
         controller: 'AccountCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/map');
+  $urlRouterProvider.otherwise('/tab/dash');
 
 });
+
+// get current date
+var currDate = new Date();
