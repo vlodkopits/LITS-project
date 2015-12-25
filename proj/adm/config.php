@@ -1,8 +1,6 @@
 <?php
 
-	$host="db7.unlim.com"; // Host name
-	$username="h3u111_mapadmin"; // Mysql username
-	$password="43204320map"; // Mysql password
+	
 	$db_name="h3u111_map"; // Database name
 	$tbl_name="events"; // Table name
 
